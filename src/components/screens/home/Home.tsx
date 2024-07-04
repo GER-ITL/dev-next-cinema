@@ -1,6 +1,11 @@
+import Layout from '@/components/layout/Layout'
 import { FC } from 'react'
-
-const Home: FC = () => {
-	return <div>Homes</div>
+import { IHome } from './home.interface'
+const Home: FC<IHome> = () => {
+	return (
+		<Layout>
+			<h1>Home</h1>
+		</Layout>
+	)
 }
 export default Home
