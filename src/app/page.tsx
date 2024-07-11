@@ -1,8 +1,9 @@
 import Home from '@/components/screens/home/Home'
+import MainProvider from '@/providers/MainProvider'
 export default function Page() {
 	return (
-		<main>
+		<MainProvider>
 			<Home />
-		</main>
+		</MainProvider>
 	)
 }
