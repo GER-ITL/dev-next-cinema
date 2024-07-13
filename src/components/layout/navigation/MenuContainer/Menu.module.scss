@@ -1,5 +1,5 @@
 .menu {
-	@apply mb-14 animate-fade;
+	@apply mb-5 animate-fade;
 	.heading {
 		@apply text-gray-500 uppercase text-sm font-semibold pl-layout;
 	}
@@ -10,7 +10,7 @@
 			> a {
 				@apply flex items-center text-gray-600 px-3 mt-6 cursor-pointer;
 				> span {
-					@apply ml-3 text-lg hover:text-white;
+					@apply ml-3 text-sm hover:text-white;
 				}
 				> svg {
 					@apply text-2lg;

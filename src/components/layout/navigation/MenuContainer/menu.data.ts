@@ -26,6 +26,32 @@ export const firstMenu: IMenu = {
 	],
 }
 
+export const genreMenu: IMenu = {
+	title: 'Popular Genres',
+	items: [
+		{
+			icon: 'MdGroup',
+			link: '/comedy',
+			title: 'Comedy',
+		},
+		{
+			icon: 'MdExplore',
+			link: '/cartoons',
+			title: 'Cartoons',
+		},
+		{
+			icon: 'MdBakeryDining',
+			link: '/fantasy',
+			title: 'Fantasy',
+		},
+		{
+			icon: 'MdAccessibilityNew',
+			link: '/biography',
+			title: 'Biography',
+		},
+	],
+}
+
 export const userMenu: IMenu = {
 	title: 'General',
 	items: [],
