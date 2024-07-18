@@ -1,6 +1,6 @@
-import { IMenu } from './menu.interface'
+import { IMenu } from './menu.types'
 
-export const firstMenu: IMenu = {
+const firstMenu: IMenu = {
 	title: 'Menu',
 	items: [
 		{
@@ -26,33 +26,9 @@ export const firstMenu: IMenu = {
 	],
 }
 
-export const genreMenu: IMenu = {
-	title: 'Popular Genres',
-	items: [
-		{
-			icon: 'MdGroup',
-			link: '/comedy',
-			title: 'Comedy',
-		},
-		{
-			icon: 'MdExplore',
-			link: '/cartoons',
-			title: 'Cartoons',
-		},
-		{
-			icon: 'MdBakeryDining',
-			link: '/fantasy',
-			title: 'Fantasy',
-		},
-		{
-			icon: 'MdAccessibilityNew',
-			link: '/biography',
-			title: 'Biography',
-		},
-	],
-}
-
-export const userMenu: IMenu = {
+const userMenu: IMenu = {
 	title: 'General',
 	items: [],
 }
+
+export const menus: IMenu[] = [firstMenu, userMenu]

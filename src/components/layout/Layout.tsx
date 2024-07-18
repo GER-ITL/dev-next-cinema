@@ -1,15 +1,18 @@
-import { PropsWithChildren } from 'react'
+import { FC } from 'react'
+
+import Sidebar from './Sidebar/Sidebar'
+import Navigation from './Navigation/Navigation'
 
 import styles from './Layout.module.scss'
-import Navigation from './navigation/Navigation'
-import Sidebar from './sidebar/Sidebar'
-const Layout = ({ children }: PropsWithChildren) => {
+
+const Layout: FC = ({ children }) => {
 	return (
-		<section className={styles.layout}>
+		<div className={styles.layout}>
 			<Navigation />
 			<div className={styles.center}>{children}</div>
 			<Sidebar />
-		</section>
+		</div>
 	)
 }
+
 export default Layout

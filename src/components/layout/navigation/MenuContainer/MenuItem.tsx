@@ -1,13 +1,15 @@
-'use client'
-import MaterialIcon from '@/components/ui/MaterialIcon'
-import cn from 'clsx'
+import cn from 'classnames'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { useRouter } from 'next/router'
 import { FC } from 'react'
+
+import { MaterialIcon } from '@/ui/icons/MaterialIcon'
+
 import styles from './Menu.module.scss'
-import { IMenuItem } from './menu.interface'
+import { IMenuItem } from './menu.types'
+
 const MenuItem: FC<{ item: IMenuItem }> = ({ item }) => {
-	const asPath = usePathname()
+	const { asPath } = useRouter()
 
 	return (
 		<li
@@ -16,10 +18,13 @@ const MenuItem: FC<{ item: IMenuItem }> = ({ item }) => {
 			})}
 		>
 			<Link href={item.link}>
-				<MaterialIcon name={item.icon} />
-				<span>{item.title}</span>
+				<a>
+					<MaterialIcon name={item.icon} />
+					<span>{item.title}</span>
+				</a>
 			</Link>
 		</li>
 	)
 }
+
 export default MenuItem
